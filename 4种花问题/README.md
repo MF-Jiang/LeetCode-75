@@ -24,7 +24,7 @@ flowerbed 中不存在相邻的两朵花
 0 <= n <= flowerbed.length
 
 ## 我的代码：
-'''
+\'''
 class Solution {
 public:
     bool canPlaceFlowers(vector<int>& flowerbed, int n) {
@@ -67,7 +67,7 @@ public:
         else return false;
     }
 };
-'''
+\'''
 
 ## 我的做法：
 傻瓜遍历法，从左到右遍历一遍每一次都确定右边一项没有1即可。(上面代码写的是左右两边都没有1，可以简化，会在时间和内存上有更好的表现)，需要注意数组长度为1的情况。
@@ -76,7 +76,7 @@ public:
 遍历了一次数组，时间复杂度为O(n),每次遍历到一个能种花的位置后自动往后多跳了以为，实际遍历长度是小于等于数组长度的，这里做了一点优化。
 
 ## 标答代码：
-'''
+\'''
 class Solution {
 public:
     bool canPlaceFlowers(vector<int>& flowerbed, int n) {
@@ -104,7 +104,7 @@ public:
         return count >= n;
     }
 };
-'''
+\'''
 
 ## 时间复杂度
 O(n)，运行表现略好于我的代码。

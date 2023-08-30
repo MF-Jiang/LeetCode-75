@@ -37,6 +37,7 @@ public:
 };
 
 ## 做法：
+图片和gif可能无法展示，可以到leetcode上查看 https://leetcode.cn/problems/greatest-common-divisor-of-strings/solutions/143956/zi-fu-chuan-de-zui-da-gong-yin-zi-by-leetcode-solu/?envType=study-plan-v2&envId=leetcode-75
 这是一个很不错的方法。(我傻傻遍历了，没想到，这是标准答案)
 需要知道一个性质：如果 str1 和 str2 拼接后等于 str2和 str1 拼接起来的字符串（注意拼接顺序不同），那么一定存在符合条件的字符串 X。
 
@@ -62,3 +63,6 @@ public:
 其实图中可以看出第一个字符串被染的颜色是以 str2 的长度在循环的，由于第二种情况下 str1 的长度不整除 str2 的长度，导致第一个字符串的 str1 部分被染完颜色的时候，str2 被染的颜色的顺序必然不等于开头 str1 被染的颜色顺序，而第二个字符串的开头又是 str2，它被染色的顺序是等于第一个字符串中 str2 被染色的顺序的，所以两个字符串的开头被染的颜色顺序一定不同。最后我们就推出如果 str1 和 str2 拼接后等于 str2 和 str1 拼接起来的字符串，那么一定存在符合条件的字符串 X。
 
 ![图四](https://assets.leetcode-cn.com/solution-static/1071_fig4.gif)
+
+## 时间复杂度
+字符串的拼接比较时间复杂度是O(n),gcd的时间复杂度是O(logn)。最终时间复杂度是O(n)。

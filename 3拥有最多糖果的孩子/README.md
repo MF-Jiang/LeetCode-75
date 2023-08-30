@@ -32,3 +32,22 @@
 2 <= candies.length <= 100
 1 <= candies[i] <= 100
 1 <= extraCandies <= 50
+
+## 代码
+class Solution {
+public:
+    vector<bool> kidsWithCandies(vector<int>& candies, int extraCandies) {
+        int maxC = *max_element(candies.begin(),candies.end());
+        vector<bool> ans;
+        for(int i=0;i<candies.size();i++){
+            ans.push_back(candies[i]+extraCandies>=maxC);
+        }
+        return ans;
+    }
+};
+
+## 做法
+找到原本获得糖果最多的孩子，让所有孩子的糖果都获得extraCandies，如果大于等于他的糖果数，记为true，否则false。
+
+## 时间复杂度
+用了max_element来找最大多糖果的孩子，记为O(n)。遍历了一遍来判断true/false,也是O(n)。最终时间复杂度是2O(n) ==> O(n)
